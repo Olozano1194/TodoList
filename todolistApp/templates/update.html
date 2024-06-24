@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{% static "css/update.css" %}">
+    
+    <title>Update</title>
+</head>
+<body>
+    <main>
+        <form method="POST" action=" {% url "actualizarTarea" tasks.id %}">
+            {% csrf_token %}
+            
+            <h1 class="title">Actualizar</h1>
+
+            <input type="hidden" name="id" value='{{tasks.id}}'>
+
+            <div class="container__div-updateTask">
+                <input type="text" class="hover updateTask" name='description' value='{{tasks.description}}'>
+                <button type='submit' class="btnUpdate hover">Actualizar</button>
+            </div>
+
+        </form>
+    </main>
+    
+</body>
+</html>

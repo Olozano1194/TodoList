@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #242323;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+}
+
+/*-----------------------------hover---------------*/
+.hover {
+    cursor: pointer;
+    
+}
+
+.container {
+    width: 90%;
+    height: 75vh;
+    background-color: aliceblue;
+    border: 2px solid #fff;
+    border-radius: 2rem;
+    overflow: auto;
+    padding-left: 2rem;
+    padding-right: 1.5rem;
+}
+
+/*-----------------header-------------*/
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    margin-bottom: 5rem;
+}
+
+header .title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #faa8a8;
+}
+
+/*-------------------main---------------*/
+main {
+    width: 100%;
+    height: 75%;
+    min-height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+main form {
+    width: 100%;
+    margin-top: 3rem;
+}
+
+/*-----------------------main top---------*/
+main .container__div-addTask {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+main .container__div-addTask .addtask {
+    width: 65%;
+    color: #706565;
+    background-color: aliceblue;
+    border: transparent;
+    border-bottom: 1.7px solid #7c7474;
+    font-size: 1.7rem;
+    outline: none;
+    margin-right: 1rem;
+    
+}
+
+main .container__div-addTask .btnAdd {
+    width: 30%;
+    height: 30px;
+    background-color: #426dfa;
+    border: transparent;
+    border-radius: 1rem;
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    
+}
+
+/*------------------main half-----------------*/
+main .container__div-description {
+    width: 100%;
+    font-size: 1.9rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+main .container__div-description span{
+    color: #7f9cfa;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+/*-----------------------main bottom-----------*/
+main .container__section-bottom {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* padding: 1rem; */
+}
+
+main .container__section-bottom .container__div-task {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1.5rem 1rem 1.5rem;
+    margin-bottom: 2rem;
+}
+
+main .container__section-bottom .container__div-task label {
+    width: 100%;
+    
+}
+
+main .container__section-bottom .container__div-task .container__div-btn {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+}
+
+main .container__section-bottom a {
+    width: 35px;
+    height: 40px;
+    border: none;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .container__section-bottom .editar {
+    background-color: #3765fd;
+    color: #fff;
+    
+}
+
+main .container__section-bottom .eliminar {
+    background-color: #f71f1f;
+    color: #fff;
+    
+}
+
+main .container__section-bottom i {
+    font-size: 2rem;
+}
+
+
+/* ----------------------------completado-----------------
+
+label .completed {
+    font-size: 2rem;
+    color: #f71f1f;
+} */
+
