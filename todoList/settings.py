@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,10 +21,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-9fi$=xup5uivqh+aa26et@b8xev8+3#$te+bmv^--g#nre_fit'
+# SECRET_KEY = 'django-insecure-9fi$=xup5uivqh+aa26et@b8xev8+3#$te+bmv^--g#nre_fit'
+SECRET_KEY = os.environ.get('SECRET_KEY', dafault='your secret key') # esto lo usamos para que el navegador nos de un Key aleatoria
+                                                                     # y así evitar que nos vean la key estatica
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'RENDER' not in os.environ # modificamos esto para que el proyecto sepa si estamos en la variable de entorno o no
+                                    # osea si es true no estamos en produccion y viceversa
 
 ALLOWED_HOSTS = []
 
