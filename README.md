@@ -1,4 +1,4 @@
-<h1 aling='center'>To Do List</h1>
+<h1 aling="center">To Do List</h1>
 
 Este proyecto fue desarrollado como parte de una Prueba técnica. Se centra en la creación de una aplicación web de gestión de tareas, que permite a los usuarios gestionar efectivamente las tareas diarias, mejorando la organizaión y productividad.
 
