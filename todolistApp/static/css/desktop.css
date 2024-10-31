@@ -1,82 +1,42 @@
-html {
-    font-size: 62.5%;
-}
-
-.container {
-    width: 45%;
-    height: 80vh;
-    padding-left: 3rem;
-    padding-right: 2rem;
-}
-
-header {
-    margin-top: 3rem;
-    margin-bottom: 0;
-}
-
 header .title {
-    font-size: 4.5rem;
-    
+    font-size: 4.5rem;   
 }
 
-main {
-    margin-top: -15rem;
-}
-
-main form {
-    margin-top: 0;
-}
-
-/*-----------------------main top---------*/
 main .container__div-addTask .addtask {
-    font-size: 2rem;
-    margin-right: 2.5rem;
+    font-size: 2.7rem;
 }
 
-/*------------------main half-----------------*/
+main .container__div-addTask .btnAdd {
+    height: 5rem;
+    font-size: 2.5rem;
+    padding-top: 2rem;
+    padding-bottom: 5rem;       
+}
+
 main .container__div-description {
-    font-size: 2.2rem;
+    font-size: 3rem;    
 }
 
 main .container__div-description span{
-    font-size: 4rem;
-    
+    font-size: 5rem;    
 }
 
-/*-----------------------main bottom-----------*/
-main .container__section-bottom {
-    height: 80px;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+main .container__section-bottom .container__div-task form label {
+    font-size: 2.5rem;
 }
 
-main .container__section-bottom label {
-    font-size: 2rem;
-    margin-left: 1rem;
-}
-
+/* btns editar y eliminar */
 main .container__section-bottom a {
-    width: 55px;
-    height: 50px;
-    border: none;
-    border-radius: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 45px;
+    height: 45px;    
 }
 
-main .container__section-bottom .editar {
-    background-color: #3765fd;
-    color: #fff;
-    
-}
-
-main .container__section-bottom .eliminar {
-    background-color: #f71f1f;
-    color: #fff;
-    
-}
 
 main .container__section-bottom i {
     font-size: 2.5rem;
+}
+
+/* Footer */
+footer p {
+    font-size: 2.2rem;    
 }

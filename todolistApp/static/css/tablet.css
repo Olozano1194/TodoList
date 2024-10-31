@@ -1,0 +1,58 @@
+.container {
+    width: 80%;
+    
+}
+
+header .title {
+    font-size: 4rem;   
+}
+
+main .container__div-addTask .addtask {
+    font-size: 2rem;
+    padding-right: 2.5rem;
+    
+}
+
+main .container__div-addTask .btnAdd {
+    font-size: 2rem;
+    margin-left: 1rem;   
+}
+
+main .container__div-description {
+    font-size: 2.2rem;    
+}
+
+main .container__div-description span{
+    font-size: 3.5rem;
+    
+}
+
+/* listado de tareas */
+main .container__section-bottom .container__div-task form label {
+    font-size: 1.8rem;
+    padding-left: 1rem;
+    
+}
+
+/* btns editar y eliminar */
+main .container__section-bottom .container__div-task .container__div-btn {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+}
+
+main .container__section-bottom a {
+    width: 35px;
+    height: 40px;
+    border: none;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .container__section-bottom i {
+    font-size: 2rem;
+}

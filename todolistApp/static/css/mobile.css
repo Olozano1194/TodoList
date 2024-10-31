@@ -28,7 +28,7 @@ body {
 
 .container {
     width: 90%;
-    height: 75vh;
+    /* height: 75vh; */
     background-color: aliceblue;
     border: 2px solid #fff;
     border-radius: 2rem;
@@ -42,21 +42,21 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 2rem;
-    margin-bottom: 5rem;
+    padding-top: 2rem;
+    
 }
 
 header .title {
     font-size: 3.5rem;
     font-weight: 700;
-    color: #faa8a8;
+    color: #d39e9e;
 }
 
 /*-------------------main---------------*/
 main {
     width: 100%;
-    height: 75%;
-    min-height: 75%;
+    /* height: 75%; */
+    /* min-height: 75%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,15 +64,15 @@ main {
     gap: 2.5rem;
 }
 
-main form {
+main .agregarTarea {
     width: 100%;
-    margin-top: 3rem;
+    padding: 1.2rem;
 }
 
 /*-----------------------main top---------*/
 main .container__div-addTask {
     width: 100%;
-    margin-top: 2rem;
+    padding-top: 2rem;
 }
 
 main .container__div-addTask .addtask {
@@ -83,13 +83,13 @@ main .container__div-addTask .addtask {
     border-bottom: 1.7px solid #7c7474;
     font-size: 1.7rem;
     outline: none;
-    margin-right: 1rem;
+    padding-right: 1.2rem;
     
 }
 
 main .container__div-addTask .btnAdd {
     width: 30%;
-    height: 30px;
+    height: 3rem;
     background-color: #426dfa;
     border: transparent;
     border-radius: 1rem;
@@ -122,7 +122,6 @@ main .container__section-bottom {
     height: 100%;
     display: flex;
     flex-direction: column;
-    /* padding: 1rem; */
 }
 
 main .container__section-bottom .container__div-task {
@@ -134,15 +133,17 @@ main .container__section-bottom .container__div-task {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    padding: 0 1.5rem 1rem 1.5rem;
+    padding: 1rem 1.5rem 1rem 1.5rem;
     margin-bottom: 2rem;
 }
 
 main .container__section-bottom .container__div-task label {
     width: 100%;
+    color: #3f3e3e;
     
 }
 
+/*----------------------btn editar y delete------------------*/
 main .container__section-bottom .container__div-task .container__div-btn {
     width: 50%;
     display: flex;
@@ -177,11 +178,17 @@ main .container__section-bottom i {
     font-size: 2rem;
 }
 
+/* Footer */
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
 
-/* ----------------------------completado-----------------
-
-label .completed {
-    font-size: 2rem;
-    color: #f71f1f;
-} */
-
+footer p {
+    font-size: 1.7rem;
+    font-weight: 700;
+}

@@ -10,21 +10,19 @@
     
     
     <link rel="stylesheet" href="{% static "css/mobile.css" %}">
-    <link rel="stylesheet" href="{% static "css/desktop.css" %} " media="(min-width: 930px)">
+    <link rel="stylesheet" href="{% static "css/tablet.css" %} " media="(min-width: 800px)">
+    <link rel="stylesheet" href="{% static "css/desktop.css" %} " media="(min-width: 1150px)">
     
     <title>Todo List</title>
 </head>
 <body>
     <section class="container">
         <header>
-            <h1 class="title">ToDo List</h1>
+            <h1 class="title">To Do List</h1>
         </header>
-        
-        <main>
-            
-            <form method="POST" action=" {% url "insert" %}">
+        <main>            
+            <form method="POST" action=" {% url "insert" %}" class="agregarTarea">
                 {% csrf_token %}
-
                 {% if error %}
                     <div class='errorViews'>
                         <p>
@@ -41,38 +39,36 @@
             
                 </div>
             </form>
+            <div class="container__div-description">
+                <p>Te quedan <span>{{ taskList_remaining }}</span> tareas por completar</p>
+            </div>
+            <section class="container__section-bottom">
+                {% if taskList %}
+                    {% for t in taskList %}
+                        <div class='container__div-task'>
+                            <form action='{% url "completed" t.id %}' method='POST' class='form'>
+                                {% csrf_token %}
 
-                <div class="container__div-description">
-                    <p>Te quedan <span>{{ taskList_remaining }}</span> tareas por completar</p>
-                </div>
-        
-                <section class="container__section-bottom">
-                    {% if taskList %}
-                        {% for t in taskList %}
-                            <div class='container__div-task'>
-                                <form action='{% url "completed" t.id %}' method='POST'>
-                                    {% csrf_token %}
+                                <input type="checkbox" name="check" id="check " {% if t.completed %}checked{% endif %} onchange="this.form.submit()" class="hover">
+                                <label for="check" {% if t.completed %}style="text-decoration: line-through;color: green;"{% endif %} class="hover">{{ t.description }}</label>
+                            </form>
 
-                                    <input type="checkbox" name="check" id="check " {% if t.completed %}checked{% endif %} onchange="this.form.submit()" class="hover">
-                                    <label for="check" {% if t.completed %}style="text-decoration: line-through;color: green;"{% endif %} class="hover">{{ t.description }}</label>
-                                </form>
-
-                                <div class="container__div-btn">
-                                    <a href='{% url "update" t.id %}' class="editar hover"><i class="fa-regular fa-pen-to-square"></i></a>
-                                    <a href='{% url "delete" t.id %}' class="eliminar hover"><i class="fa-regular fa-trash-can"></i></a>
-                                </div>
-                                
+                            <div class="container__div-btn">
+                                <a href='{% url "update" t.id %}' class="editar hover"><i class="fa-regular fa-pen-to-square"></i></a>
+                                <a href='{% url "delete" t.id %}' class="eliminar hover"><i class="fa-regular fa-trash-can"></i></a>
                             </div>
-                        {% endfor %}
+                                
+                        </div>
+                    {% endfor %}
                     {% else %}
                         <p>No hay tareas</p>
-                    {% endif %}
+                {% endif %}
                 
-                </section>
-
-            
+                </section>            
         </main>
-    </section>
-    
+        <footer>
+            <p>© 2024 Desarrollado por Oscar Lozano</p>
+        </footer>
+    </section>    
 </body>
 </html>
