@@ -7,6 +7,11 @@ header .title {
     font-size: 4rem;   
 }
 
+/* main */
+main .agregarTarea .errorViews p {
+    font-size: 2rem;
+}
+
 main .container__div-addTask .addtask {
     font-size: 2rem;
     padding-right: 2.5rem;
@@ -26,6 +31,12 @@ main .container__div-description span{
     font-size: 3.5rem;
     
 }
+
+/* Main bottom */
+main .container__section-bottom .container__div-task {
+    padding: 1rem 1.5rem 1rem 2rem;
+}
+
 
 /* listado de tareas */
 main .container__section-bottom .container__div-task form label {
@@ -55,4 +66,9 @@ main .container__section-bottom a {
 
 main .container__section-bottom i {
     font-size: 2rem;
+}
+
+/* footer */
+footer p {
+    font-size: 1.7rem;
 }

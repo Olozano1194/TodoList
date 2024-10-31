@@ -69,6 +69,11 @@ main .agregarTarea {
     padding: 1.2rem;
 }
 
+main .agregarTarea .errorViews p {
+    color: #f71f1f;
+    font-size: 1.5rem;
+}
+
 /*-----------------------main top---------*/
 main .container__div-addTask {
     width: 100%;
@@ -130,7 +135,7 @@ main .container__section-bottom .container__div-task {
     background-color: #fff;
     border-radius: 1rem;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     gap: 1rem;
     padding: 1rem 1.5rem 1rem 1.5rem;
@@ -140,7 +145,8 @@ main .container__section-bottom .container__div-task {
 main .container__section-bottom .container__div-task label {
     width: 100%;
     color: #3f3e3e;
-    
+    padding-left: 0.5rem;
+        
 }
 
 /*----------------------btn editar y delete------------------*/
@@ -149,7 +155,7 @@ main .container__section-bottom .container__div-task .container__div-btn {
     display: flex;
     justify-content: end;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 main .container__section-bottom a {
@@ -189,6 +195,6 @@ footer {
 }
 
 footer p {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: 700;
 }

@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .forms import TaskForm
+#from .forms import TaskForm
 from .models import Task
 
 # Create your views here.
@@ -15,12 +15,15 @@ def index(request):
 
 def insert(request):
     error = None #inicializamos la variable error
+    list = Task.objects.all() #cogemos todos los datos de la tabla task y los guardamos en la variable
+    taskList_remaining = list.filter(completed=False).count()
     
     if request.method == 'POST': #preguntamos si ya se han enviado los datos
         taskDescription = request.POST.get('description','').strip() #guardamos los datos del input en la variable
 
         if not taskDescription: 
             error = 'El Input no puede estar vacio'
+                        
         else:
             try: 
                 task = Task(description=taskDescription) #creamos una tarea, usando la descripcion proporsionada por el user
@@ -29,7 +32,14 @@ def insert(request):
             except Exception as e:
                 error = f'Ocurrió un error al guardar la tarea: {e}'
 
-    return render(request, 'index.html', {'error': error})
+    #Definimos el contexto para el render
+    context = {
+        'taskList': list,
+        'taskList_remaining': taskList_remaining,
+        'error': error
+    }   
+
+    return render(request, 'index.html', context)
 
 def delete(request, id):
     tarea = Task.objects.get(id=id)
