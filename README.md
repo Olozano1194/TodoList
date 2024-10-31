@@ -47,16 +47,16 @@ Si quiere clonar el repositorio para no tener que empezar desde cero, haga lo si
 5. Tenemos que crear la base de datos en Worbench, nosotros la llamamos 'todolist', si no le gusta ese nombre, puede colocarle el que ustedes deseen, pero si le cambian el nombre más adelante tocará hacerle otras configuraciones.
 6. Si le crearon la base de datos con otro nombre, toca dirijirse al archivo **settings.py**, y cambiarle el nombre de la base de datos que aparece en la siguiente parte:
  - ```bash
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'nombre-de-la-base-de-datos', # nombre de la base de datos
-            'USER': 'nombre-de-usuario', # nombre de usuario
-            'PASSWORD': 'contraseña', # contraseña
-            'HOST': 'localhost', # servidor
-            'PORT': '3306', # puerto
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.mysql',
+                'NAME': 'nombre-de-la-base-de-datos', # nombre de la base de datos
+                'USER': 'nombre-de-usuario', # nombre de usuario
+                'PASSWORD': 'contraseña', # contraseña
+                'HOST': 'localhost', # servidor
+                'PORT': '3306', # puerto
+            }
         }
-    }
    ```
 
 7. Luego de que termine de hacer las configuraciones, debemos dirigirnos a 
