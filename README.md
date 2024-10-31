@@ -59,15 +59,37 @@ Si quiere clonar el repositorio para no tener que empezar desde cero, haga lo si
         }
    ```
 
-7. Luego de que termine de hacer las configuraciones, debemos dirigirnos a 
+7. Luego de que termine de hacer las configuracion en ese archivo, nos toca hacer las migraciones:
+ - ```bash
+        python manage.py makemigrations
+    ```
+ - ```bash
+        python manage.py migrate
+    ```
 
-
-
+8. Luego de terminar esas configuraciones podemos ejecutar el proyecto:
+ - ```bash
+        python manage.py runserver 
+    ```
+9. Luego de que termine de ejecutar el proyecto, se abrirá una ventana en
+http://127.0.0.1:8000/api/ donde podrá ver el proyecto funcionando.
 
 ### Instalación de Dependencias
 
-1. se crea una carpeta raiz, con el nombre que usted desee, en mi caso lo llamaré 'TodoList'
-2. Dentro de la carpeta raiz, se crea un archivo llamado 'requirements.txt
+Si no desea clonar el repo y quiere comenzar desde cero, siga estaos pasos
+
+1. se crea una carpeta raiz, con el nombre que usted desee, en mi caso le coloqué 'TodoList'
+2. En la terminal, nos dirigimos a la carpeta que acabamos de crear, y colocamos los siguiente:
+ - ```bash
+    django-admin startproject todoList .
+   ```
+3. Luego de que termine de crear el proyecto, en el mismo terminar colocamos lo siguiente
+ - ```python
+    python manage.py startapp todoListApp
+   ```
+
+
+2. Dentro de la carpeta raiz, se crea un archivo llamado 'requirements.txt'
 
 
 
