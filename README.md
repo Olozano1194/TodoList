@@ -79,7 +79,7 @@ http://127.0.0.1:8000/api/ donde podrá ver el proyecto funcionando.
 Si no desea clonar el repo y quiere comenzar desde cero, siga estaos pasos
 
 1. se crea una carpeta raiz, con el nombre que usted desee, en mi caso le coloqué 'TodoList'
-2. En la terminal, creamos el entorno virtual de la siguiente manera:
+2. En la terminal, creamos dentro de la carpeta raiz, el entorno virtual de la siguiente manera:
  - ```bash
     python -m venv entorno
    ```
