@@ -18,7 +18,6 @@ La aplicación permite a los usuarios:
 - Python
 - MySql
 
-
 ## Tutorial: Creación de una Aplicación de Lista de Tareas con Django y MySql
 
 ### Requisitos Previos
@@ -26,8 +25,10 @@ La aplicación permite a los usuarios:
 Antes de comenzar, asegurate de tener instalado lo siguiente:
 
 - Python
-- Editod de texto o IDE "Visual Studio Code"
+- Editor de texto o IDE "Visual Studio Code"
 - Conocimientos básicos de Html y Css
+- Conocimientos básicos de Django y MySql
+- Instalar MySql (Worbench) en tu sistema operativo.
 
 ## Clonar Repositorio
 
@@ -43,7 +44,25 @@ Si quiere clonar el repositorio para no tener que empezar desde cero, haga lo si
  - ```bash
      pip install -r requirements.txt
    ```
-5. 
+5. Tenemos que crear la base de datos en Worbench, nosotros la llamamos 'todolist', si no le gusta ese nombre, puede colocarle el que ustedes deseen, pero si le cambian el nombre más adelante tocará hacerle otras configuraciones.
+6. Si le crearon la base de datos con otro nombre, toca dirijirse al archivo **settings.py**, y cambiarle el nombre de la base de datos que aparece en la siguiente parte:
+ - ```bash
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'nombre-de-la-base-de-datos', # nombre de la base de datos
+            'USER': 'nombre-de-usuario', # nombre de usuario
+            'PASSWORD': 'contraseña', # contraseña
+            'HOST': 'localhost', # servidor
+            'PORT': '3306', # puerto
+        }
+    }
+   ```
+
+7. Luego de que termine de hacer las configuraciones, debemos dirigirnos a 
+
+
+
 
 ### Instalación de Dependencias
 
