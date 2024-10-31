@@ -1,3 +1,7 @@
+.container {
+    max-width: 1200px;
+}
+
 header .title {
     font-size: 4.5rem;   
 }
