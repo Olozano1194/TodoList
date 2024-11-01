@@ -22,7 +22,7 @@ La aplicación permite a los usuarios:
 
 ### Requisitos Previos
 
-Antes de comenzar, asegurate de tener instalado lo siguiente:
+Antes de comenzar, asegurate de tener instalado y conocimientos en lo siguiente:
 
 - Python
 - Editor de texto o IDE "Visual Studio Code"
